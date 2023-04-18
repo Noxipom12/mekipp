@@ -5,6 +5,7 @@
 import socket
 import requests
 import pprint
+import json
 
 #host name untuk memasukan web
 hostname = input('masukan nama domain: ')
@@ -18,6 +19,3 @@ geolocation = geolocation.split("(")[1].strip("(")
 geolocation = json.loads(geolocation)
 for k,v in geolocation.items():
     pprint.pprint(str(k) + ' : ' + str(v))
-
-print(f'Nama Website: {hostname}')
-print(f'IP Address: {ip_addres}')
